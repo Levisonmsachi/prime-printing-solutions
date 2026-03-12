@@ -1,0 +1,134 @@
+[
+  {
+    "model": "contactpage.contactpageintro",
+    "pk": 1,
+    "fields": {
+      "title": "Get In Touch",
+      "subtitle": "Ready to bring your printing vision to life? Contact our team of experts for personalized solutions and exceptional service.",
+      "is_active": true,
+      "updated_at": "2024-01-01T00:00:00Z"
+    }
+  },
+  {
+    "model": "contactpage.contactinfo",
+    "pk": 1,
+    "fields": {
+      "phone": "+1 (555) 123-4567",
+      "email": "info@primeprintsolutions.com",
+      "address": "123 Print Street\nBusiness District\nCity, State 12345\nUnited States",
+      "business_hours": "Monday - Friday: 8:00 AM - 6:00 PM\nSaturday: 9:00 AM - 4:00 PM\nSunday: Closed",
+      "is_active": true
+    }
+  },
+  {
+    "model": "contactpage.officelocation",
+    "pk": 1,
+    "fields": {
+      "name": "Main Office & Production Facility",
+      "address": "123 Print Street",
+      "city": "Business District",
+      "state": "State",
+      "zip_code": "12345",
+      "country": "United States",
+      "latitude": 40.7128,
+      "longitude": -74.0060,
+      "phone": "+1 (555) 123-4567",
+      "email": "info@primeprintsolutions.com",
+      "is_main": true,
+      "is_active": true
+    }
+  },
+  {
+    "model": "contactpage.contactformsettings",
+    "pk": 1,
+    "fields": {
+      "require_phone": false,
+      "allow_attachments": true,
+      "max_attachment_size": 10,
+      "success_message": "Thank you for your message! We'll get back to you within 24 hours.",
+      "is_active": true
+    }
+  },
+  {
+    "model": "contactpage.contactcta",
+    "pk": 1,
+    "fields": {
+      "message": "Ready to start your next printing project?",
+      "button_text": "Get Quote",
+      "button_link": "/services",
+      "is_active": true
+    }
+  },
+  {
+    "model": "contactpage.contactpagesection",
+    "pk": 1,
+    "fields": {
+      "section_key": "intro",
+      "display_name": "Page Intro",
+      "is_enabled": true,
+      "display_order": 1,
+      "default_enabled": true,
+      "default_order": 1
+    }
+  },
+  {
+    "model": "contactpage.contactpagesection",
+    "pk": 2,
+    "fields": {
+      "section_key": "info",
+      "display_name": "Contact Information",
+      "is_enabled": true,
+      "display_order": 2,
+      "default_enabled": true,
+      "default_order": 2
+    }
+  },
+  {
+    "model": "contactpage.contactpagesection",
+    "pk": 3,
+    "fields": {
+      "section_key": "locations",
+      "display_name": "Office Locations",
+      "is_enabled": true,
+      "display_order": 3,
+      "default_enabled": true,
+      "default_order": 3
+    }
+  },
+  {
+    "model": "contactpage.contactpagesection",
+    "pk": 4,
+    "fields": {
+      "section_key": "form",
+      "display_name": "Contact Form",
+      "is_enabled": true,
+      "display_order": 4,
+      "default_enabled": true,
+      "default_order": 4
+    }
+  },
+  {
+    "model": "contactpage.contactpagesection",
+    "pk": 5,
+    "fields": {
+      "section_key": "map",
+      "display_name": "Map Section",
+      "is_enabled": true,
+      "display_order": 5,
+      "default_enabled": true,
+      "default_order": 5
+    }
+  },
+  {
+    "model": "contactpage.contactpagesection",
+    "pk": 6,
+    "fields": {
+      "section_key": "cta",
+      "display_name": "Call To Action",
+      "is_enabled": true,
+      "display_order": 6,
+      "default_enabled": true,
+      "default_order": 6
+    }
+  }
+]

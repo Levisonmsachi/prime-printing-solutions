@@ -1,0 +1,232 @@
+[
+  {
+    "model": "servicespage.servicespageintro",
+    "pk": 1,
+    "fields": {
+      "title": "Our Services",
+      "subtitle": "From concept to completion, we provide comprehensive printing solutions tailored to your needs. Our expert team delivers exceptional quality and reliability across all printing services.",
+      "is_active": true,
+      "updated_at": "2024-01-01T00:00:00Z"
+    }
+  },
+  {
+    "model": "servicespage.servicecategory",
+    "pk": 1,
+    "fields": {
+      "name": "Digital Printing",
+      "description": "High-quality digital printing solutions for all your needs",
+      "icon": "fas fa-print",
+      "display_order": 1,
+      "is_active": true
+    }
+  },
+  {
+    "model": "servicespage.servicecategory",
+    "pk": 2,
+    "fields": {
+      "name": "Offset Printing",
+      "description": "Traditional offset printing for large volume projects",
+      "icon": "fas fa-cogs",
+      "display_order": 2,
+      "is_active": true
+    }
+  },
+  {
+    "model": "servicespage.servicecategory",
+    "pk": 3,
+    "fields": {
+      "name": "Specialty Printing",
+      "description": "Unique printing techniques and specialty finishes",
+      "icon": "fas fa-magic",
+      "display_order": 3,
+      "is_active": true
+    }
+  },
+  {
+    "model": "servicespage.service",
+    "pk": 1,
+    "fields": {
+      "category": 1,
+      "name": "Business Cards",
+      "short_description": "Professional business cards with premium finishes",
+      "full_description": "High-quality business cards printed on premium cardstock with various finish options including gloss, matte, and spot UV. Perfect for making a lasting impression.",
+      "icon": "fas fa-address-card",
+      "features": ["Premium cardstock", "Multiple finish options", "Fast turnaround", "Bulk discounts"],
+      "pricing_info": "Starting at $25 per 500 cards",
+      "turnaround_time": "3-5 business days",
+      "display_order": 1,
+      "is_featured": true,
+      "is_active": true,
+      "created_at": "2024-01-01T00:00:00Z",
+      "updated_at": "2024-01-01T00:00:00Z"
+    }
+  },
+  {
+    "model": "servicespage.service",
+    "pk": 2,
+    "fields": {
+      "category": 1,
+      "name": "Brochures & Flyers",
+      "short_description": "Eye-catching brochures and flyers for marketing",
+      "full_description": "Full-color brochures and flyers designed to capture attention and deliver your message effectively. Available in various sizes and paper stocks.",
+      "icon": "fas fa-bullhorn",
+      "features": ["Full color printing", "Multiple sizes", "Various paper stocks", "Folding options"],
+      "pricing_info": "Starting at $150 per 1000 pieces",
+      "turnaround_time": "5-7 business days",
+      "display_order": 2,
+      "is_featured": true,
+      "is_active": true,
+      "created_at": "2024-01-01T00:00:00Z",
+      "updated_at": "2024-01-01T00:00:00Z"
+    }
+  },
+  {
+    "model": "servicespage.service",
+    "pk": 3,
+    "fields": {
+      "category": 2,
+      "name": "Large Format Posters",
+      "short_description": "High-impact posters for events and advertising",
+      "full_description": "Large format posters printed on durable materials perfect for outdoor and indoor advertising, events, and displays.",
+      "icon": "fas fa-image",
+      "features": ["Weather-resistant", "Multiple sizes", "Durable materials", "High resolution"],
+      "pricing_info": "Starting at $50 per poster",
+      "turnaround_time": "2-3 business days",
+      "display_order": 3,
+      "is_featured": true,
+      "is_active": true,
+      "created_at": "2024-01-01T00:00:00Z",
+      "updated_at": "2024-01-01T00:00:00Z"
+    }
+  },
+  {
+    "model": "servicespage.serviceprocessstep",
+    "pk": 1,
+    "fields": {
+      "service": 1,
+      "step_number": 1,
+      "title": "Design Consultation",
+      "description": "We discuss your requirements and design preferences",
+      "icon": "fas fa-comments",
+      "estimated_time": "30 minutes"
+    }
+  },
+  {
+    "model": "servicespage.serviceprocessstep",
+    "pk": 2,
+    "fields": {
+      "service": 1,
+      "step_number": 2,
+      "title": "Design & Proof",
+      "description": "Our designers create your business cards and provide digital proof",
+      "icon": "fas fa-pencil-alt",
+      "estimated_time": "2-3 days"
+    }
+  },
+  {
+    "model": "servicespage.serviceprocessstep",
+    "pk": 3,
+    "fields": {
+      "service": 1,
+      "step_number": 3,
+      "title": "Printing",
+      "description": "High-quality printing using premium materials",
+      "icon": "fas fa-print",
+      "estimated_time": "1 day"
+    }
+  },
+  {
+    "model": "servicespage.serviceprocessstep",
+    "pk": 4,
+    "fields": {
+      "service": 1,
+      "step_number": 4,
+      "title": "Finishing & Delivery",
+      "description": "Final finishing touches and delivery to your location",
+      "icon": "fas fa-truck",
+      "estimated_time": "1 day"
+    }
+  },
+  {
+    "model": "servicespage.servicescta",
+    "pk": 1,
+    "fields": {
+      "message": "Ready to get started with your printing project?",
+      "button_text": "Get Quote",
+      "button_link": "/contact",
+      "is_active": true
+    }
+  },
+  {
+    "model": "servicespage.servicespagesection",
+    "pk": 1,
+    "fields": {
+      "section_key": "intro",
+      "display_name": "Page Intro",
+      "is_enabled": true,
+      "display_order": 1,
+      "default_enabled": true,
+      "default_order": 1
+    }
+  },
+  {
+    "model": "servicespage.servicespagesection",
+    "pk": 2,
+    "fields": {
+      "section_key": "categories",
+      "display_name": "Service Categories",
+      "is_enabled": true,
+      "display_order": 2,
+      "default_enabled": true,
+      "default_order": 2
+    }
+  },
+  {
+    "model": "servicespage.servicespagesection",
+    "pk": 3,
+    "fields": {
+      "section_key": "featured_services",
+      "display_name": "Featured Services",
+      "is_enabled": true,
+      "display_order": 3,
+      "default_enabled": true,
+      "default_order": 3
+    }
+  },
+  {
+    "model": "servicespage.servicespagesection",
+    "pk": 4,
+    "fields": {
+      "section_key": "all_services",
+      "display_name": "All Services",
+      "is_enabled": true,
+      "display_order": 4,
+      "default_enabled": true,
+      "default_order": 4
+    }
+  },
+  {
+    "model": "servicespage.servicespagesection",
+    "pk": 5,
+    "fields": {
+      "section_key": "process",
+      "display_name": "Our Process",
+      "is_enabled": true,
+      "display_order": 5,
+      "default_enabled": true,
+      "default_order": 5
+    }
+  },
+  {
+    "model": "servicespage.servicespagesection",
+    "pk": 6,
+    "fields": {
+      "section_key": "cta",
+      "display_name": "Call To Action",
+      "is_enabled": true,
+      "display_order": 6,
+      "default_enabled": true,
+      "default_order": 6
+    }
+  }
+]

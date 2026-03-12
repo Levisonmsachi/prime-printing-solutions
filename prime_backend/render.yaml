@@ -1,0 +1,7 @@
+services:
+  - type: web
+    name: prime-backend
+    env: python
+    rootDir: prime_backend
+    buildCommand: pip install -r requirements.txt
+    startCommand: gunicorn prime_backend.wsgi

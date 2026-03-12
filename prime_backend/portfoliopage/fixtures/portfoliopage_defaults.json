@@ -1,0 +1,208 @@
+[
+  {
+    "model": "portfoliopage.portfoliopagesection",
+    "pk": 1,
+    "fields": {
+      "section_key": "intro",
+      "display_name": "Portfolio Intro",
+      "is_enabled": true,
+      "display_order": 1,
+      "default_enabled": true,
+      "default_order": 1
+    }
+  },
+  {
+    "model": "portfoliopage.portfoliopagesection",
+    "pk": 2,
+    "fields": {
+      "section_key": "categories",
+      "display_name": "Category Filters",
+      "is_enabled": true,
+      "display_order": 2,
+      "default_enabled": true,
+      "default_order": 2
+    }
+  },
+  {
+    "model": "portfoliopage.portfoliopagesection",
+    "pk": 3,
+    "fields": {
+      "section_key": "projects",
+      "display_name": "Portfolio Projects",
+      "is_enabled": true,
+      "display_order": 3,
+      "default_enabled": true,
+      "default_order": 3
+    }
+  },
+  {
+    "model": "portfoliopage.portfoliopagesection",
+    "pk": 4,
+    "fields": {
+      "section_key": "cta",
+      "display_name": "Call To Action",
+      "is_enabled": true,
+      "display_order": 4,
+      "default_enabled": true,
+      "default_order": 4
+    }
+  },
+  {
+    "model": "portfoliopage.portfoliointro",
+    "pk": 1,
+    "fields": {
+      "title": "Our Work Speaks for Itself",
+      "subtitle": "Explore our portfolio of successful printing projects across various industries. Each project showcases our commitment to quality, creativity, and client satisfaction.",
+      "is_active": true,
+      "updated_at": "2025-01-01T00:00:00Z"
+    }
+  },
+  {
+    "model": "portfoliopage.portfoliocategory",
+    "pk": 1,
+    "fields": {
+      "name": "Branding",
+      "slug": "branding",
+      "display_order": 1,
+      "is_active": true
+    }
+  },
+  {
+    "model": "portfoliopage.portfoliocategory",
+    "pk": 2,
+    "fields": {
+      "name": "Packaging",
+      "slug": "packaging",
+      "display_order": 2,
+      "is_active": true
+    }
+  },
+  {
+    "model": "portfoliopage.portfoliocategory",
+    "pk": 3,
+    "fields": {
+      "name": "Commercial Printing",
+      "slug": "commercial-printing",
+      "display_order": 3,
+      "is_active": true
+    }
+  },
+  {
+    "model": "portfoliopage.portfolioproject",
+    "pk": 1,
+    "fields": {
+      "title": "Corporate Branding Package",
+      "client_name": "TechCorp Solutions",
+      "category": 1,
+      "short_description": "Complete branding package including business cards, letterheads, and presentation folders.",
+      "full_description": "A comprehensive branding project for TechCorp Solutions, featuring custom business cards with embossed logos, premium letterheads, and professional presentation folders. The project involved color matching, premium paper selection, and attention to detail in finishing.",
+      "cover_image": "",
+      "is_featured": true,
+      "display_order": 1,
+      "is_active": true,
+      "created_at": "2025-01-01T00:00:00Z"
+    }
+  },
+  {
+    "model": "portfoliopage.portfolioproject",
+    "pk": 2,
+    "fields": {
+      "title": "Luxury Product Packaging",
+      "client_name": "Elegant Cosmetics",
+      "category": 2,
+      "short_description": "High-end cosmetic packaging with foil stamping and special finishes.",
+      "full_description": "Premium packaging design for a luxury cosmetics line, featuring gold foil stamping, spot UV coating, and textured cardstock. The packaging included product boxes, labels, and display stands.",
+      "cover_image": "",
+      "is_featured": true,
+      "display_order": 2,
+      "is_active": true,
+      "created_at": "2025-01-01T00:00:00Z"
+    }
+  },
+  {
+    "model": "portfoliopage.projecthighlight",
+    "pk": 1,
+    "fields": {
+      "project": 1,
+      "label": "Quantity",
+      "value": "2,500 sets"
+    }
+  },
+  {
+    "model": "portfoliopage.projecthighlight",
+    "pk": 2,
+    "fields": {
+      "project": 1,
+      "label": "Turnaround",
+      "value": "5 business days"
+    }
+  },
+  {
+    "model": "portfoliopage.projecthighlight",
+    "pk": 3,
+    "fields": {
+      "project": 2,
+      "label": "Material",
+      "value": "300gsm textured cardstock"
+    }
+  },
+  {
+    "model": "portfoliopage.projecthighlight",
+    "pk": 4,
+    "fields": {
+      "project": 2,
+      "label": "Finish",
+      "value": "Gold foil + spot UV"
+    }
+  },
+  {
+    "model": "portfoliopage.portfolioprojectimage",
+    "pk": 1,
+    "fields": {
+      "project": 1,
+      "image": "",
+      "caption": "Business card design",
+      "display_order": 1
+    }
+  },
+  {
+    "model": "portfoliopage.portfolioprojectimage",
+    "pk": 2,
+    "fields": {
+      "project": 1,
+      "image": "",
+      "caption": "Letterhead sample",
+      "display_order": 2
+    }
+  },
+  {
+    "model": "portfoliopage.portfolioprojectimage",
+    "pk": 3,
+    "fields": {
+      "project": 2,
+      "image": "",
+      "caption": "Product box design",
+      "display_order": 1
+    }
+  },
+  {
+    "model": "portfoliopage.portfolioprojectimage",
+    "pk": 4,
+    "fields": {
+      "project": 2,
+      "image": "",
+      "caption": "Packaging details",
+      "display_order": 2
+    }
+  },
+  {
+    "model": "portfoliopage.portfoliocta",
+    "pk": 1,
+    "fields": {
+      "message": "Like what you see? Let's create something together.",
+      "button_text": "Get a Quote",
+      "button_link": "/contact",
+      "is_active": true
+    }
+  }
+]

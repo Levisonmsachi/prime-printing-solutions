@@ -1,0 +1,78 @@
+[
+  {
+    "model": "certifications.certificationpageintro",
+    "pk": 1,
+    "fields": {
+      "title": "Our Certifications & Accreditations",
+      "subtitle": "We maintain the highest industry standards and certifications to ensure quality, reliability, and compliance in all our printing solutions.",
+      "is_active": true,
+      "updated_at": "2024-01-01T00:00:00Z"
+    }
+  },
+  {
+    "model": "certifications.certificationnotice",
+    "pk": 1,
+    "fields": {
+      "message": "All certifications are valid and verifiable with issuing authorities. We regularly renew our certifications to maintain compliance with the latest industry standards.",
+      "is_active": true
+    }
+  },
+  {
+    "model": "certifications.certificationcta",
+    "pk": 1,
+    "fields": {
+      "message": "Need a certified and trusted printing partner?",
+      "button_text": "Contact Us",
+      "button_link": "/contact",
+      "is_active": true
+    }
+  },
+  {
+    "model": "certifications.certificationpagesection",
+    "pk": 1,
+    "fields": {
+      "section_key": "intro",
+      "display_name": "Page Intro",
+      "is_enabled": true,
+      "display_order": 1,
+      "default_enabled": true,
+      "default_order": 1
+    }
+  },
+  {
+    "model": "certifications.certificationpagesection",
+    "pk": 2,
+    "fields": {
+      "section_key": "certifications",
+      "display_name": "Certifications Grid",
+      "is_enabled": true,
+      "display_order": 2,
+      "default_enabled": true,
+      "default_order": 2
+    }
+  },
+  {
+    "model": "certifications.certificationpagesection",
+    "pk": 3,
+    "fields": {
+      "section_key": "notice",
+      "display_name": "Verification Notice",
+      "is_enabled": true,
+      "display_order": 3,
+      "default_enabled": true,
+      "default_order": 3
+    }
+  },
+  {
+    "model": "certifications.certificationpagesection",
+    "pk": 4,
+    "fields": {
+      "section_key": "cta",
+      "display_name": "Call To Action",
+      "is_enabled": true,
+      "display_order": 4,
+      "default_enabled": true,
+      "default_order": 4
+    }
+  }
+]
