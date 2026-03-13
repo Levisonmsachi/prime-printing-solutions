@@ -286,7 +286,7 @@ function AdminServices() {
 
   if (loading) {
     return (
-      <div className="min-h-screen bg-gradient-to-br from-gray-50 to-gray-100 flex items-center justify-center">
+      <div className="min-h-screen bg-linear-to-br from-gray-50 to-gray-100 flex items-center justify-center">
         <motion.div
           initial={{ opacity: 0, scale: 0.5 }}
           animate={{ opacity: 1, scale: 1 }}
@@ -306,7 +306,7 @@ function AdminServices() {
   }
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-50 to-gray-100">
+    <div className="min-h-screen bg-linear-to-br from-gray-50 to-gray-100">
       {/* Mobile Sidebar Overlay */}
       {sidebarOpen && (
         <motion.div
@@ -358,11 +358,11 @@ function AdminServices() {
             animate={{ scale: 1 }}
             className="flex items-center space-x-3 mb-8"
           >
-            <div className="w-12 h-12 bg-gradient-to-br from-green-600 to-green-800 rounded-xl flex items-center justify-center shadow-lg">
+            <div className="w-12 h-12 bg-linear-to-br from-green-600 to-green-800 rounded-xl flex items-center justify-center shadow-lg">
               <FiTool className="w-6 h-6 text-white" />
             </div>
             <div>
-              <h2 className="text-xl font-bold bg-gradient-to-r from-green-600 to-green-800 bg-clip-text text-transparent">
+              <h2 className="text-xl font-bold bg-linear-to-r from-green-600 to-green-800 bg-clip-text text-transparent">
                 Prime Print
               </h2>
               <p className="text-xs text-gray-500">Services Editor</p>
@@ -430,7 +430,7 @@ function AdminServices() {
                     </motion.div>
                   </Link>
                   <div className="h-6 w-px bg-gray-300"></div>
-                  <h1 className="text-xl font-bold bg-gradient-to-r from-green-800 to-green-600 bg-clip-text text-transparent">
+                  <h1 className="text-xl font-bold bg-linear-to-r from-green-800 to-green-600 bg-clip-text text-transparent">
                     Services Management
                   </h1>
                 </div>
@@ -440,7 +440,7 @@ function AdminServices() {
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
                 onClick={handleLogout}
-                className="flex items-center space-x-2 px-4 py-2 bg-gradient-to-r from-red-500 to-red-600 text-white rounded-lg hover:from-red-600 hover:to-red-700 transition-all shadow-md hover:shadow-lg"
+                className="flex items-center space-x-2 px-4 py-2 bg-linear-to-r from-red-500 to-red-600 text-white rounded-lg hover:from-red-600 hover:to-red-700 transition-all shadow-md hover:shadow-lg"
               >
                 <FiLogOut className="w-4 h-4" />
                 <span>Logout</span>
@@ -551,7 +551,7 @@ function AdminServices() {
                     whileTap={{ scale: 0.98 }}
                     type="submit"
                     disabled={saving}
-                    className="flex items-center px-6 py-2 bg-gradient-to-r from-green-600 to-green-700 text-white rounded-lg hover:from-green-700 hover:to-green-800 disabled:opacity-50 shadow-md"
+                    className="flex items-center px-6 py-2 bg-linear-to-r from-green-600 to-green-700 text-white rounded-lg hover:from-green-700 hover:to-green-800 disabled:opacity-50 shadow-md"
                   >
                     <FiSave className="w-4 h-4 mr-2" />
                     {saving ? "Saving..." : "Save Intro Section"}
@@ -579,7 +579,7 @@ function AdminServices() {
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
                   onClick={() => openModal("category")}
-                  className="flex items-center px-4 py-2 bg-gradient-to-r from-green-600 to-green-700 text-white rounded-lg hover:from-green-700 hover:to-green-800 shadow-md"
+                  className="flex items-center px-4 py-2 bg-linear-to-r from-green-600 to-green-700 text-white rounded-lg hover:from-green-700 hover:to-green-800 shadow-md"
                 >
                   <FiPlus className="w-4 h-4 mr-2" />
                   Add Category
@@ -666,7 +666,7 @@ function AdminServices() {
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
                   onClick={() => openModal("service")}
-                  className="flex items-center px-4 py-2 bg-gradient-to-r from-green-600 to-green-700 text-white rounded-lg hover:from-green-700 hover:to-green-800 shadow-md"
+                  className="flex items-center px-4 py-2 bg-linear-to-r from-green-600 to-green-700 text-white rounded-lg hover:from-green-700 hover:to-green-800 shadow-md"
                 >
                   <FiPlus className="w-4 h-4 mr-2" />
                   Add Service
@@ -779,7 +779,7 @@ function AdminServices() {
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
                   onClick={() => openModal("processStep")}
-                  className="flex items-center px-4 py-2 bg-gradient-to-r from-green-600 to-green-700 text-white rounded-lg hover:from-green-700 hover:to-green-800 shadow-md"
+                  className="flex items-center px-4 py-2 bg-linear-to-r from-green-600 to-green-700 text-white rounded-lg hover:from-green-700 hover:to-green-800 shadow-md"
                 >
                   <FiPlus className="w-4 h-4 mr-2" />
                   Add Step
@@ -797,7 +797,7 @@ function AdminServices() {
                   >
                     <div className="flex items-start justify-between">
                       <div className="flex items-start space-x-4 flex-1">
-                        <div className="w-10 h-10 bg-green-100 rounded-full flex items-center justify-center flex-shrink-0">
+                        <div className="w-10 h-10 bg-green-100 rounded-full flex items-center justify-center shrink-0">
                           <span className="text-lg font-bold text-green-600">
                             {step.step_number}
                           </span>
@@ -908,7 +908,7 @@ function AdminServices() {
                     whileTap={{ scale: 0.98 }}
                     type="submit"
                     disabled={saving}
-                    className="flex items-center px-6 py-2 bg-gradient-to-r from-green-600 to-green-700 text-white rounded-lg hover:from-green-700 hover:to-green-800 disabled:opacity-50 shadow-md"
+                    className="flex items-center px-6 py-2 bg-linear-to-r from-green-600 to-green-700 text-white rounded-lg hover:from-green-700 hover:to-green-800 disabled:opacity-50 shadow-md"
                   >
                     <FiSave className="w-4 h-4 mr-2" />
                     {saving ? "Saving..." : "Save CTA Section"}
@@ -1026,7 +1026,7 @@ function AdminServices() {
                         whileTap={{ scale: 0.98 }}
                         type="submit"
                         disabled={saving}
-                        className="px-4 py-2 bg-gradient-to-r from-green-600 to-green-700 text-white rounded-lg hover:from-green-700 hover:to-green-800 disabled:opacity-50"
+                        className="px-4 py-2 bg-linear-to-r from-green-600 to-green-700 text-white rounded-lg hover:from-green-700 hover:to-green-800 disabled:opacity-50"
                       >
                         {saving ? "Saving..." : editingItem ? "Update" : "Create"}
                       </motion.button>
@@ -1173,7 +1173,7 @@ function AdminServices() {
                         whileTap={{ scale: 0.98 }}
                         type="submit"
                         disabled={saving}
-                        className="px-4 py-2 bg-gradient-to-r from-green-600 to-green-700 text-white rounded-lg hover:from-green-700 hover:to-green-800 disabled:opacity-50"
+                        className="px-4 py-2 bg-linear-to-r from-green-600 to-green-700 text-white rounded-lg hover:from-green-700 hover:to-green-800 disabled:opacity-50"
                       >
                         {saving ? "Saving..." : editingItem ? "Update" : "Create"}
                       </motion.button>
@@ -1246,7 +1246,7 @@ function AdminServices() {
                         whileTap={{ scale: 0.98 }}
                         type="submit"
                         disabled={saving}
-                        className="px-4 py-2 bg-gradient-to-r from-green-600 to-green-700 text-white rounded-lg hover:from-green-700 hover:to-green-800 disabled:opacity-50"
+                        className="px-4 py-2 bg-linear-to-r from-green-600 to-green-700 text-white rounded-lg hover:from-green-700 hover:to-green-800 disabled:opacity-50"
                       >
                         {saving ? "Saving..." : editingItem ? "Update" : "Create"}
                       </motion.button>

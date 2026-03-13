@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
@@ -30,7 +31,7 @@ function AdminLoginPage() {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-gray-800 to-[#1E88C8] flex items-center justify-center p-4 relative overflow-hidden">
+    <div className="min-h-screen bg-linear-to-br from-gray-900 via-gray-800 to-[#1E88C8] flex items-center justify-center p-4 relative overflow-hidden">
       {/* Animated Background Elements */}
       <div className="absolute inset-0 overflow-hidden">
         <div className="absolute -top-40 -right-40 w-80 h-80 bg-[#1E88C8] rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-blob"></div>
@@ -164,7 +165,7 @@ function AdminLoginPage() {
               whileTap={{ scale: 0.98 }}
               type="submit"
               disabled={loading}
-              className={`w-full py-3 px-4 bg-gradient-to-r from-[#1E88C8] to-blue-600 text-white font-semibold rounded-xl shadow-lg hover:from-blue-600 hover:to-[#1E88C8] focus:outline-none focus:ring-2 focus:ring-[#1E88C8] focus:ring-offset-2 focus:ring-offset-gray-900 transition-all ${
+              className={`w-full py-3 px-4 bg-linear-to-r from-[#1E88C8] to-blue-600 text-white font-semibold rounded-xl shadow-lg hover:from-blue-600 hover:to-[#1E88C8] focus:outline-none focus:ring-2 focus:ring-[#1E88C8] focus:ring-offset-2 focus:ring-offset-gray-900 transition-all ${
                 loading ? "opacity-70 cursor-not-allowed" : ""
               }`}
             >

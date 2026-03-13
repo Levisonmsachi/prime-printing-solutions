@@ -1,12 +1,32 @@
+/* eslint-disable no-unused-vars */
 import { useState, useEffect } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
-import { 
-  FiUsers, FiHome, FiLogOut, FiMenu, FiX, FiPlus, FiEdit2, 
-  FiTrash2, FiSave, FiChevronLeft, FiAlertCircle, 
-  FiCheckCircle, FiStar, FiTarget, FiHeart,
-  FiAward, FiBriefcase, FiGlobe, FiCalendar,
-  FiEye, FiEyeOff, FiLink, FiInfo, FiBarChart2
+import {
+  FiUsers,
+  FiHome,
+  FiLogOut,
+  FiMenu,
+  FiX,
+  FiPlus,
+  FiEdit2,
+  FiTrash2,
+  FiSave,
+  FiChevronLeft,
+  FiAlertCircle,
+  FiCheckCircle,
+  FiStar,
+  FiTarget,
+  FiHeart,
+  FiAward,
+  FiBriefcase,
+  FiGlobe,
+  FiCalendar,
+  FiEye,
+  FiEyeOff,
+  FiLink,
+  FiInfo,
+  FiBarChart2,
 } from "react-icons/fi";
 import {
   getAboutCompanyProfile,
@@ -132,7 +152,10 @@ function AdminAbout() {
     setSaving(true);
     try {
       await updateAboutCompanyProfile(companyProfile.id, companyProfileForm);
-      setMessage({ type: "success", text: "Company profile saved successfully!" });
+      setMessage({
+        type: "success",
+        text: "Company profile saved successfully!",
+      });
       setTimeout(() => setMessage({ type: "", text: "" }), 3000);
       fetchData();
     } catch (err) {
@@ -199,10 +222,16 @@ function AdminAbout() {
     try {
       if (editingItem) {
         await updateAboutTeam(editingItem.id, data);
-        setMessage({ type: "success", text: "Team member updated successfully!" });
+        setMessage({
+          type: "success",
+          text: "Team member updated successfully!",
+        });
       } else {
         await createAboutTeam(data);
-        setMessage({ type: "success", text: "Team member created successfully!" });
+        setMessage({
+          type: "success",
+          text: "Team member created successfully!",
+        });
       }
       setTimeout(() => setMessage({ type: "", text: "" }), 3000);
       closeModal();
@@ -218,7 +247,10 @@ function AdminAbout() {
     if (!confirm("Are you sure you want to delete this?")) return;
     try {
       await deleteAboutTeam(id);
-      setMessage({ type: "success", text: "Team member deleted successfully!" });
+      setMessage({
+        type: "success",
+        text: "Team member deleted successfully!",
+      });
       setTimeout(() => setMessage({ type: "", text: "" }), 3000);
       fetchData();
     } catch (err) {
@@ -344,19 +376,75 @@ function AdminAbout() {
   ];
 
   const menuItems = [
-    { to: "/admin", icon: FiHome, title: "Dashboard", desc: "Back to main dashboard", color: "text-blue-600", bgColor: "bg-blue-50" },
-    { to: "/admin/homepage", icon: FiHome, title: "Homepage", desc: "Manage homepage", color: "text-indigo-600", bgColor: "bg-indigo-50" },
-    { to: "/admin/about", icon: FiUsers, title: "About Page", desc: "Current page", color: "text-purple-600", bgColor: "bg-purple-50" },
-    { to: "/admin/services", icon: FiBriefcase, title: "Services", desc: "Manage services", color: "text-green-600", bgColor: "bg-green-50" },
-    { to: "/admin/portfolio", icon: FiAward, title: "Portfolio", desc: "Projects", color: "text-orange-600", bgColor: "bg-orange-50" },
-    { to: "/admin/contact", icon: FiGlobe, title: "Contact", desc: "Messages", color: "text-red-600", bgColor: "bg-red-50" },
-    { to: "/admin/certifications", icon: FiStar, title: "Certifications", desc: "Certificates", color: "text-yellow-600", bgColor: "bg-yellow-50" },
-    { to: "/admin/quotes", icon: FiTarget, title: "Quotes", desc: "Requests", color: "text-pink-600", bgColor: "bg-pink-50" },
+    {
+      to: "/admin",
+      icon: FiHome,
+      title: "Dashboard",
+      desc: "Back to main dashboard",
+      color: "text-blue-600",
+      bgColor: "bg-blue-50",
+    },
+    {
+      to: "/admin/homepage",
+      icon: FiHome,
+      title: "Homepage",
+      desc: "Manage homepage",
+      color: "text-indigo-600",
+      bgColor: "bg-indigo-50",
+    },
+    {
+      to: "/admin/about",
+      icon: FiUsers,
+      title: "About Page",
+      desc: "Current page",
+      color: "text-purple-600",
+      bgColor: "bg-purple-50",
+    },
+    {
+      to: "/admin/services",
+      icon: FiBriefcase,
+      title: "Services",
+      desc: "Manage services",
+      color: "text-green-600",
+      bgColor: "bg-green-50",
+    },
+    {
+      to: "/admin/portfolio",
+      icon: FiAward,
+      title: "Portfolio",
+      desc: "Projects",
+      color: "text-orange-600",
+      bgColor: "bg-orange-50",
+    },
+    {
+      to: "/admin/contact",
+      icon: FiGlobe,
+      title: "Contact",
+      desc: "Messages",
+      color: "text-red-600",
+      bgColor: "bg-red-50",
+    },
+    {
+      to: "/admin/certifications",
+      icon: FiStar,
+      title: "Certifications",
+      desc: "Certificates",
+      color: "text-yellow-600",
+      bgColor: "bg-yellow-50",
+    },
+    {
+      to: "/admin/quotes",
+      icon: FiTarget,
+      title: "Quotes",
+      desc: "Requests",
+      color: "text-pink-600",
+      bgColor: "bg-pink-50",
+    },
   ];
 
   if (loading) {
     return (
-      <div className="min-h-screen bg-gradient-to-br from-gray-50 to-gray-100 flex items-center justify-center">
+      <div className="min-h-screen bg-linear-to-br from-gray-50 to-gray-100 flex items-center justify-center">
         <motion.div
           initial={{ opacity: 0, scale: 0.5 }}
           animate={{ opacity: 1, scale: 1 }}
@@ -369,14 +457,16 @@ function AdminAbout() {
               <div className="w-16 h-16 bg-purple-600 rounded-full animate-pulse opacity-20"></div>
             </div>
           </div>
-          <p className="mt-4 text-gray-600 font-medium">Loading about page data...</p>
+          <p className="mt-4 text-gray-600 font-medium">
+            Loading about page data...
+          </p>
         </motion.div>
       </div>
     );
   }
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-50 to-gray-100">
+    <div className="min-h-screen bg-linear-to-br from-gray-50 to-gray-100">
       {/* Mobile Sidebar Overlay */}
       {sidebarOpen && (
         <motion.div
@@ -398,7 +488,10 @@ function AdminAbout() {
         <div className="p-6">
           <div className="flex justify-between items-center mb-8">
             <h2 className="text-xl font-bold text-gray-800">Menu</h2>
-            <button onClick={() => setSidebarOpen(false)} className="p-2 hover:bg-gray-100 rounded-lg">
+            <button
+              onClick={() => setSidebarOpen(false)}
+              className="p-2 hover:bg-gray-100 rounded-lg"
+            >
               <FiX className="w-5 h-5 text-gray-600" />
             </button>
           </div>
@@ -423,22 +516,22 @@ function AdminAbout() {
       {/* Desktop Sidebar */}
       <div className="hidden lg:block fixed left-0 top-0 h-full w-64 bg-white shadow-xl">
         <div className="p-6">
-          <motion.div 
+          <motion.div
             initial={{ scale: 0.9 }}
             animate={{ scale: 1 }}
             className="flex items-center space-x-3 mb-8"
           >
-            <div className="w-12 h-12 bg-gradient-to-br from-purple-600 to-purple-800 rounded-xl flex items-center justify-center shadow-lg">
+            <div className="w-12 h-12 bg-linear-to-br from-purple-600 to-purple-800 rounded-xl flex items-center justify-center shadow-lg">
               <FiUsers className="w-6 h-6 text-white" />
             </div>
             <div>
-              <h2 className="text-xl font-bold bg-gradient-to-r from-purple-600 to-purple-800 bg-clip-text text-transparent">
+              <h2 className="text-xl font-bold bg-linear-to-r from-purple-600 to-purple-800 bg-clip-text text-transparent">
                 Prime Print
               </h2>
               <p className="text-xs text-gray-500">About Page Editor</p>
             </div>
           </motion.div>
-          
+
           <nav className="space-y-2">
             {menuItems.map((item, index) => (
               <motion.div
@@ -451,14 +544,20 @@ function AdminAbout() {
                 <Link
                   to={item.to}
                   className={`flex items-center space-x-3 p-3 rounded-xl transition-all group ${
-                    item.to === "/admin/about" ? "bg-purple-50" : "hover:bg-gray-50"
+                    item.to === "/admin/about"
+                      ? "bg-purple-50"
+                      : "hover:bg-gray-50"
                   }`}
                 >
-                  <div className={`p-2.5 ${item.to === "/admin/about" ? "bg-purple-100" : item.bgColor} rounded-lg group-hover:scale-110 transition-transform shadow-sm`}>
+                  <div
+                    className={`p-2.5 ${item.to === "/admin/about" ? "bg-purple-100" : item.bgColor} rounded-lg group-hover:scale-110 transition-transform shadow-sm`}
+                  >
                     <item.icon className={`w-5 h-5 ${item.color}`} />
                   </div>
                   <div>
-                    <span className={`text-gray-700 font-medium ${item.to === "/admin/about" ? "text-purple-700" : ""}`}>
+                    <span
+                      className={`text-gray-700 font-medium ${item.to === "/admin/about" ? "text-purple-700" : ""}`}
+                    >
                       {item.title}
                     </span>
                     <p className="text-xs text-gray-400">{item.desc}</p>
@@ -500,17 +599,17 @@ function AdminAbout() {
                     </motion.div>
                   </Link>
                   <div className="h-6 w-px bg-gray-300"></div>
-                  <h1 className="text-xl font-bold bg-gradient-to-r from-purple-800 to-purple-600 bg-clip-text text-transparent">
+                  <h1 className="text-xl font-bold bg-linear-to-r from-purple-800 to-purple-600 bg-clip-text text-transparent">
                     About Page Management
                   </h1>
                 </div>
               </div>
-              
+
               <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
                 onClick={handleLogout}
-                className="flex items-center space-x-2 px-4 py-2 bg-gradient-to-r from-red-500 to-red-600 text-white rounded-lg hover:from-red-600 hover:to-red-700 transition-all shadow-md hover:shadow-lg"
+                className="flex items-center space-x-2 px-4 py-2 bg-linear-to-r from-red-500 to-red-600 text-white rounded-lg hover:from-red-600 hover:to-red-700 transition-all shadow-md hover:shadow-lg"
               >
                 <FiLogOut className="w-4 h-4" />
                 <span>Logout</span>
@@ -539,7 +638,13 @@ function AdminAbout() {
                   ) : (
                     <FiAlertCircle className="w-5 h-5 text-red-500 mr-2" />
                   )}
-                  <span className={message.type === "success" ? "text-green-700" : "text-red-700"}>
+                  <span
+                    className={
+                      message.type === "success"
+                        ? "text-green-700"
+                        : "text-red-700"
+                    }
+                  >
                     {message.text}
                   </span>
                 </div>
@@ -548,7 +653,7 @@ function AdminAbout() {
           </AnimatePresence>
 
           {/* Tabs */}
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             className="bg-white rounded-xl shadow-lg mb-6 overflow-hidden"
@@ -564,9 +669,11 @@ function AdminAbout() {
                       : "text-gray-600 hover:text-gray-900 hover:bg-white/50"
                   }`}
                 >
-                  <tab.icon className={`w-4 h-4 mr-2 ${
-                    activeTab === tab.id ? "text-purple-600" : "text-gray-400"
-                  }`} />
+                  <tab.icon
+                    className={`w-4 h-4 mr-2 ${
+                      activeTab === tab.id ? "text-purple-600" : "text-gray-400"
+                    }`}
+                  />
                   {tab.label}
                 </button>
               ))}
@@ -771,7 +878,7 @@ function AdminAbout() {
                     whileTap={{ scale: 0.98 }}
                     type="submit"
                     disabled={saving}
-                    className="flex items-center px-6 py-2 bg-gradient-to-r from-purple-600 to-purple-700 text-white rounded-lg hover:from-purple-700 hover:to-purple-800 disabled:opacity-50 shadow-md"
+                    className="flex items-center px-6 py-2 bg-linear-to-r from-purple-600 to-purple-700 text-white rounded-lg hover:from-purple-700 hover:to-purple-800 disabled:opacity-50 shadow-md"
                   >
                     <FiSave className="w-4 h-4 mr-2" />
                     {saving ? "Saving..." : "Save Company Profile"}
@@ -799,13 +906,13 @@ function AdminAbout() {
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
                   onClick={() => openModal("history")}
-                  className="flex items-center px-4 py-2 bg-gradient-to-r from-blue-600 to-blue-700 text-white rounded-lg hover:from-blue-700 hover:to-blue-800 shadow-md"
+                  className="flex items-center px-4 py-2 bg-linear-to-r from-blue-600 to-blue-700 text-white rounded-lg hover:from-blue-700 hover:to-blue-800 shadow-md"
                 >
                   <FiPlus className="w-4 h-4 mr-2" />
                   Add History
                 </motion.button>
               </div>
-              
+
               <div className="space-y-4">
                 {history.map((item) => (
                   <motion.div
@@ -819,9 +926,13 @@ function AdminAbout() {
                       <div className="flex-1">
                         <div className="flex items-center mb-2">
                           <FiCalendar className="w-4 h-4 text-blue-500 mr-2" />
-                          <span className="text-sm font-semibold text-blue-600">{item.year}</span>
+                          <span className="text-sm font-semibold text-blue-600">
+                            {item.year}
+                          </span>
                         </div>
-                        <h3 className="font-bold text-lg text-gray-800">{item.title}</h3>
+                        <h3 className="font-bold text-lg text-gray-800">
+                          {item.title}
+                        </h3>
                         <p className="text-gray-600 mt-1">{item.content}</p>
                         {item.display_order && (
                           <span className="inline-block mt-2 text-xs text-gray-400">
@@ -851,11 +962,13 @@ function AdminAbout() {
                   </motion.div>
                 ))}
               </div>
-              
+
               {history.length === 0 && (
                 <div className="text-center py-12">
                   <FiCalendar className="w-12 h-12 text-gray-300 mx-auto mb-4" />
-                  <p className="text-gray-500">No history entries yet. Add one to get started.</p>
+                  <p className="text-gray-500">
+                    No history entries yet. Add one to get started.
+                  </p>
                 </div>
               )}
             </motion.div>
@@ -879,13 +992,13 @@ function AdminAbout() {
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
                   onClick={() => openModal("team")}
-                  className="flex items-center px-4 py-2 bg-gradient-to-r from-green-600 to-green-700 text-white rounded-lg hover:from-green-700 hover:to-green-800 shadow-md"
+                  className="flex items-center px-4 py-2 bg-linear-to-r from-green-600 to-green-700 text-white rounded-lg hover:from-green-700 hover:to-green-800 shadow-md"
                 >
                   <FiPlus className="w-4 h-4 mr-2" />
                   Add Team Member
                 </motion.button>
               </div>
-              
+
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                 {team.map((member) => (
                   <motion.div
@@ -896,7 +1009,7 @@ function AdminAbout() {
                     className="border border-gray-200 rounded-xl p-5 hover:shadow-lg transition-all"
                   >
                     <div className="text-center">
-                      {(member.avatar_url || member.avatar) ? (
+                      {member.avatar_url || member.avatar ? (
                         <img
                           src={member.avatar_url || member.avatar}
                           alt={member.full_name}
@@ -907,10 +1020,16 @@ function AdminAbout() {
                           <FiUsers className="w-12 h-12 text-green-400" />
                         </div>
                       )}
-                      <h3 className="font-bold text-lg text-gray-800">{member.full_name}</h3>
-                      <p className="text-green-600 text-sm font-medium">{member.role}</p>
+                      <h3 className="font-bold text-lg text-gray-800">
+                        {member.full_name}
+                      </h3>
+                      <p className="text-green-600 text-sm font-medium">
+                        {member.role}
+                      </p>
                       {member.bio && (
-                        <p className="text-gray-500 text-sm mt-2 line-clamp-2">{member.bio}</p>
+                        <p className="text-gray-500 text-sm mt-2 line-clamp-2">
+                          {member.bio}
+                        </p>
                       )}
                       <div className="flex justify-center space-x-2 mt-4">
                         <motion.button
@@ -934,11 +1053,13 @@ function AdminAbout() {
                   </motion.div>
                 ))}
               </div>
-              
+
               {team.length === 0 && (
                 <div className="text-center py-12">
                   <FiUsers className="w-12 h-12 text-gray-300 mx-auto mb-4" />
-                  <p className="text-gray-500">No team members yet. Add one to get started.</p>
+                  <p className="text-gray-500">
+                    No team members yet. Add one to get started.
+                  </p>
                 </div>
               )}
             </motion.div>
@@ -962,13 +1083,13 @@ function AdminAbout() {
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
                   onClick={() => openModal("value")}
-                  className="flex items-center px-4 py-2 bg-gradient-to-r from-red-600 to-red-700 text-white rounded-lg hover:from-red-700 hover:to-red-800 shadow-md"
+                  className="flex items-center px-4 py-2 bg-linear-to-r from-red-600 to-red-700 text-white rounded-lg hover:from-red-700 hover:to-red-800 shadow-md"
                 >
                   <FiPlus className="w-4 h-4 mr-2" />
                   Add Value
                 </motion.button>
               </div>
-              
+
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 {values.map((value) => (
                   <motion.div
@@ -982,9 +1103,13 @@ function AdminAbout() {
                       <div className="flex-1">
                         <div className="flex items-center mb-2">
                           {value.icon_class && (
-                            <span className="text-xl mr-2">{value.icon_class}</span>
+                            <span className="text-xl mr-2">
+                              {value.icon_class}
+                            </span>
                           )}
-                          <h3 className="font-bold text-lg text-gray-800">{value.title}</h3>
+                          <h3 className="font-bold text-lg text-gray-800">
+                            {value.title}
+                          </h3>
                         </div>
                         <p className="text-gray-600">{value.description}</p>
                         {value.display_order && (
@@ -1015,11 +1140,13 @@ function AdminAbout() {
                   </motion.div>
                 ))}
               </div>
-              
+
               {values.length === 0 && (
                 <div className="text-center py-12">
                   <FiHeart className="w-12 h-12 text-gray-300 mx-auto mb-4" />
-                  <p className="text-gray-500">No values yet. Add one to get started.</p>
+                  <p className="text-gray-500">
+                    No values yet. Add one to get started.
+                  </p>
                 </div>
               )}
             </motion.div>
@@ -1043,13 +1170,13 @@ function AdminAbout() {
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
                   onClick={() => openModal("impact")}
-                  className="flex items-center px-4 py-2 bg-gradient-to-r from-orange-600 to-orange-700 text-white rounded-lg hover:from-orange-700 hover:to-orange-800 shadow-md"
+                  className="flex items-center px-4 py-2 bg-linear-to-r from-orange-600 to-orange-700 text-white rounded-lg hover:from-orange-700 hover:to-orange-800 shadow-md"
                 >
                   <FiPlus className="w-4 h-4 mr-2" />
                   Add Impact
                 </motion.button>
               </div>
-              
+
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 {impact.map((item) => (
                   <motion.div
@@ -1061,7 +1188,9 @@ function AdminAbout() {
                   >
                     <div className="flex items-start justify-between">
                       <div className="flex-1">
-                        <h3 className="font-bold text-lg text-gray-800">{item.title}</h3>
+                        <h3 className="font-bold text-lg text-gray-800">
+                          {item.title}
+                        </h3>
                         <p className="text-gray-600 mt-1">{item.description}</p>
                         {item.display_order && (
                           <span className="inline-block mt-2 text-xs text-gray-400">
@@ -1091,11 +1220,13 @@ function AdminAbout() {
                   </motion.div>
                 ))}
               </div>
-              
+
               {impact.length === 0 && (
                 <div className="text-center py-12">
                   <FiBarChart2 className="w-12 h-12 text-gray-300 mx-auto mb-4" />
-                  <p className="text-gray-500">No impact yet. Add one to get started.</p>
+                  <p className="text-gray-500">
+                    No impact yet. Add one to get started.
+                  </p>
                 </div>
               )}
             </motion.div>
@@ -1119,13 +1250,13 @@ function AdminAbout() {
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
                   onClick={() => openModal("partner")}
-                  className="flex items-center px-4 py-2 bg-gradient-to-r from-indigo-600 to-indigo-700 text-white rounded-lg hover:from-indigo-700 hover:to-indigo-800 shadow-md"
+                  className="flex items-center px-4 py-2 bg-linear-to-r from-indigo-600 to-indigo-700 text-white rounded-lg hover:from-indigo-700 hover:to-indigo-800 shadow-md"
                 >
                   <FiPlus className="w-4 h-4 mr-2" />
                   Add Partner
                 </motion.button>
               </div>
-              
+
               <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
                 {partners.map((partner) => (
                   <motion.div
@@ -1135,7 +1266,7 @@ function AdminAbout() {
                     whileHover={{ y: -5 }}
                     className="border border-gray-200 rounded-xl p-5 hover:shadow-lg transition-all text-center"
                   >
-                    {(partner.logo_url || partner.logo) ? (
+                    {partner.logo_url || partner.logo ? (
                       <img
                         src={partner.logo_url || partner.logo}
                         alt={partner.name}
@@ -1179,11 +1310,13 @@ function AdminAbout() {
                   </motion.div>
                 ))}
               </div>
-              
+
               {partners.length === 0 && (
                 <div className="text-center py-12">
                   <FiGlobe className="w-12 h-12 text-gray-300 mx-auto mb-4" />
-                  <p className="text-gray-500">No partners yet. Add one to get started.</p>
+                  <p className="text-gray-500">
+                    No partners yet. Add one to get started.
+                  </p>
                 </div>
               )}
             </motion.div>
@@ -1210,23 +1343,45 @@ function AdminAbout() {
             >
               <div className="p-6 border-b border-gray-200 flex justify-between items-center sticky top-0 bg-white">
                 <h3 className="text-lg font-bold flex items-center">
-                  <div className={`w-8 h-8 rounded-lg flex items-center justify-center mr-3 ${
-                    modalType === "history" ? "bg-blue-100" :
-                    modalType === "team" ? "bg-green-100" :
-                    modalType === "value" ? "bg-red-100" :
-                    modalType === "impact" ? "bg-orange-100" : "bg-indigo-100"
-                  }`}>
-                    {modalType === "history" && <FiCalendar className="w-4 h-4 text-blue-600" />}
-                    {modalType === "team" && <FiUsers className="w-4 h-4 text-green-600" />}
-                    {modalType === "value" && <FiHeart className="w-4 h-4 text-red-600" />}
-                    {modalType === "impact" && <FiBarChart2 className="w-4 h-4 text-orange-600" />}
-                    {modalType === "partner" && <FiGlobe className="w-4 h-4 text-indigo-600" />}
+                  <div
+                    className={`w-8 h-8 rounded-lg flex items-center justify-center mr-3 ${
+                      modalType === "history"
+                        ? "bg-blue-100"
+                        : modalType === "team"
+                          ? "bg-green-100"
+                          : modalType === "value"
+                            ? "bg-red-100"
+                            : modalType === "impact"
+                              ? "bg-orange-100"
+                              : "bg-indigo-100"
+                    }`}
+                  >
+                    {modalType === "history" && (
+                      <FiCalendar className="w-4 h-4 text-blue-600" />
+                    )}
+                    {modalType === "team" && (
+                      <FiUsers className="w-4 h-4 text-green-600" />
+                    )}
+                    {modalType === "value" && (
+                      <FiHeart className="w-4 h-4 text-red-600" />
+                    )}
+                    {modalType === "impact" && (
+                      <FiBarChart2 className="w-4 h-4 text-orange-600" />
+                    )}
+                    {modalType === "partner" && (
+                      <FiGlobe className="w-4 h-4 text-indigo-600" />
+                    )}
                   </div>
                   {editingItem ? "Edit" : "Add"}{" "}
-                  {modalType === "history" ? "History Entry" :
-                   modalType === "team" ? "Team Member" :
-                   modalType === "value" ? "Company Value" :
-                   modalType === "impact" ? "Impact Item" : "Partner"}
+                  {modalType === "history"
+                    ? "History Entry"
+                    : modalType === "team"
+                      ? "Team Member"
+                      : modalType === "value"
+                        ? "Company Value"
+                        : modalType === "impact"
+                          ? "Impact Item"
+                          : "Partner"}
                 </h3>
                 <motion.button
                   whileHover={{ scale: 1.1 }}
@@ -1237,7 +1392,7 @@ function AdminAbout() {
                   <FiX className="w-5 h-5 text-gray-500" />
                 </motion.button>
               </div>
-              
+
               <div className="p-6">
                 {modalType === "history" && (
                   <form onSubmit={handleSaveHistory}>
@@ -1272,7 +1427,9 @@ function AdminAbout() {
                         <textarea
                           name="content"
                           defaultValue={
-                            editingItem?.content || editingItem?.description || ""
+                            editingItem?.content ||
+                            editingItem?.description ||
+                            ""
                           }
                           rows={3}
                           className="w-full px-4 py-2 border border-gray-200 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
@@ -1305,9 +1462,13 @@ function AdminAbout() {
                         whileTap={{ scale: 0.98 }}
                         type="submit"
                         disabled={saving}
-                        className="px-4 py-2 bg-gradient-to-r from-blue-600 to-blue-700 text-white rounded-lg hover:from-blue-700 hover:to-blue-800 disabled:opacity-50"
+                        className="px-4 py-2 bg-linear-to-r from-blue-600 to-blue-700 text-white rounded-lg hover:from-blue-700 hover:to-blue-800 disabled:opacity-50"
                       >
-                        {saving ? "Saving..." : editingItem ? "Update" : "Create"}
+                        {saving
+                          ? "Saving..."
+                          : editingItem
+                            ? "Update"
+                            : "Create"}
                       </motion.button>
                     </div>
                   </form>
@@ -1366,7 +1527,9 @@ function AdminAbout() {
                               alt="Current"
                               className="w-12 h-12 rounded-full object-cover"
                             />
-                            <span className="text-sm text-gray-500 ml-2">Current photo</span>
+                            <span className="text-sm text-gray-500 ml-2">
+                              Current photo
+                            </span>
                           </div>
                         )}
                       </div>
@@ -1397,9 +1560,13 @@ function AdminAbout() {
                         whileTap={{ scale: 0.98 }}
                         type="submit"
                         disabled={saving}
-                        className="px-4 py-2 bg-gradient-to-r from-green-600 to-green-700 text-white rounded-lg hover:from-green-700 hover:to-green-800 disabled:opacity-50"
+                        className="px-4 py-2 bg-linear-to-r from-green-600 to-green-700 text-white rounded-lg hover:from-green-700 hover:to-green-800 disabled:opacity-50"
                       >
-                        {saving ? "Saving..." : editingItem ? "Update" : "Create"}
+                        {saving
+                          ? "Saving..."
+                          : editingItem
+                            ? "Update"
+                            : "Create"}
                       </motion.button>
                     </div>
                   </form>
@@ -1467,9 +1634,13 @@ function AdminAbout() {
                         whileTap={{ scale: 0.98 }}
                         type="submit"
                         disabled={saving}
-                        className="px-4 py-2 bg-gradient-to-r from-red-600 to-red-700 text-white rounded-lg hover:from-red-700 hover:to-red-800 disabled:opacity-50"
+                        className="px-4 py-2 bg-linear-to-r from-red-600 to-red-700 text-white rounded-lg hover:from-red-700 hover:to-red-800 disabled:opacity-50"
                       >
-                        {saving ? "Saving..." : editingItem ? "Update" : "Create"}
+                        {saving
+                          ? "Saving..."
+                          : editingItem
+                            ? "Update"
+                            : "Create"}
                       </motion.button>
                     </div>
                   </form>
@@ -1527,16 +1698,23 @@ function AdminAbout() {
                         whileTap={{ scale: 0.98 }}
                         type="submit"
                         disabled={saving}
-                        className="px-4 py-2 bg-gradient-to-r from-orange-600 to-orange-700 text-white rounded-lg hover:from-orange-700 hover:to-orange-800 disabled:opacity-50"
+                        className="px-4 py-2 bg-linear-to-r from-orange-600 to-orange-700 text-white rounded-lg hover:from-orange-700 hover:to-orange-800 disabled:opacity-50"
                       >
-                        {saving ? "Saving..." : editingItem ? "Update" : "Create"}
+                        {saving
+                          ? "Saving..."
+                          : editingItem
+                            ? "Update"
+                            : "Create"}
                       </motion.button>
                     </div>
                   </form>
                 )}
 
                 {modalType === "partner" && (
-                  <form onSubmit={handleSavePartner} encType="multipart/form-data">
+                  <form
+                    onSubmit={handleSavePartner}
+                    encType="multipart/form-data"
+                  >
                     <div className="space-y-4">
                       <div>
                         <label className="block text-sm font-medium text-gray-700 mb-1">
@@ -1566,7 +1744,9 @@ function AdminAbout() {
                               alt="Current logo"
                               className="w-12 h-12 object-contain"
                             />
-                            <span className="text-sm text-gray-500 ml-2">Current logo</span>
+                            <span className="text-sm text-gray-500 ml-2">
+                              Current logo
+                            </span>
                           </div>
                         )}
                       </div>
@@ -1608,9 +1788,13 @@ function AdminAbout() {
                         whileTap={{ scale: 0.98 }}
                         type="submit"
                         disabled={saving}
-                        className="px-4 py-2 bg-gradient-to-r from-indigo-600 to-indigo-700 text-white rounded-lg hover:from-indigo-700 hover:to-indigo-800 disabled:opacity-50"
+                        className="px-4 py-2 bg-linear-to-r from-indigo-600 to-indigo-700 text-white rounded-lg hover:from-indigo-700 hover:to-indigo-800 disabled:opacity-50"
                       >
-                        {saving ? "Saving..." : editingItem ? "Update" : "Create"}
+                        {saving
+                          ? "Saving..."
+                          : editingItem
+                            ? "Update"
+                            : "Create"}
                       </motion.button>
                     </div>
                   </form>
